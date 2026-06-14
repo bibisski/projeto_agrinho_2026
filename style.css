@@ -1,8 +1,8 @@
 /* Configurações Gerais e Cores */
 :root {
-    --verde-escuro: #1b4332;
+    --azul-escuro: #255aaa;
     --verde-principal: #2d6a4f;
-    --verde-claro: #52b788;
+    --azul-claro: #ff0000;
     --bege-fundo: #f4f7f5;
     --texto: #2d3748;
     --branco: #ffffff;
@@ -29,11 +29,11 @@ body {
 
 /* Cabeçalho (Hero Section) */
 header {
-    background: linear-gradient(135deg, var(--verde-escuro), var(--verde-principal));
+    background: linear-gradient(135deg, var(--azul-escuro), var(--azul-principal));
     color: var(--branco);
     padding: 100px 0;
     text-align: center;
-    border-bottom: 5px solid var(--verde-claro);
+    border-bottom: 5px solid var(--azul-claro);
 }
 
 header h1 {
@@ -42,7 +42,7 @@ header h1 {
 }
 
 header h1 span {
-    color: var(--verde-claro);
+    color: var(--azul-claro);
 }
 
 header p {
@@ -53,8 +53,8 @@ header p {
 }
 
 header button {
-    background-color: var(--verde-claro);
-    color: var(--verde-escuro);
+    background-color: var(--azul-claro);
+    color: var(--azul-escuro);
     border: none;
     padding: 12px 30px;
     font-size: 1rem;
@@ -97,7 +97,7 @@ header button:hover {
 }
 
 .card h3 {
-    color: var(--verde-escuro);
+    color: var(--azul-escuro);
     margin-bottom: 12px;
     font-size: 1.4rem;
 }
@@ -108,12 +108,12 @@ header button:hover {
     padding: 40px;
     border-radius: 10px;
     margin-bottom: 60px;
-    border-left: 5px solid var(--verde-claro);
+    border-left: 5px solid var(--azul-claro);
     animation: fadeIn 0.5s ease-in-out;
 }
 
 #info-extra h2 {
-    color: var(--verde-escuro);
+    color: var(--azul-escuro);
     margin-bottom: 15px;
 }
 
@@ -129,7 +129,7 @@ header button:hover {
 
 /* Rodapé */
 footer {
-    background-color: var(--verde-escuro);
+    background-color: var(--azul-escuro);
     color: var(--branco);
     text-align: center;
     padding: 20px 0;
