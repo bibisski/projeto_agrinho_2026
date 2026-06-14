@@ -1,42 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Interatividade do Formulário de Contato
-    const form = document.getElementById('form-contato');
-    const mensagemSucesso = document.getElementById('mensagem-sucesso');
+    // 1. Ação do Botão Principal (Hero)
+    const btnConhecer = document.getElementById('btn-conhecer');
+    
+    btnConhecer.addEventListener('click', () => {
+        // Rola suavemente até a seção de pilares
+        document.getElementById('pilares').scrollIntoView({ behavior: 'smooth' });
+    });
 
-    form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Impede o recarregamento da página
+    // 2. Manipulação do Formulário de Contato
+    const formContato = document.getElementById('form-contato');
+    const feedback = document.getElementById('feedback');
 
-        // Captura os dados digitados
+    formContato.addEventListener('submit', (event) => {
+        // Impede a página de recarregar com o envio do form
+        event.preventDefault();
+
+        // Captura os valores dos campos
         const nome = document.getElementById('nome').value;
         const email = document.getElementById('email').value;
 
-        // Simula o envio bem-sucedido
-        mensagemSucesso.textContent = `Obrigado pelo apoio, ${nome}! Entraremos em contato pelo e-mail: ${email}.`;
-        mensagemSucesso.classList.remove('hidden');
-
-        // Limpa o formulário
-        form.reset();
-
-        // Esconde a mensagem após 5 segundos
-        setTimeout(() => {
-            mensagemSucesso.classList.add('hidden');
-        }, 5000);
-    });
-
-    // 2. Interatividade nos Cards dos Pilares
-    const cards = document.querySelectorAll('.card');
-
-    cards.forEach(card => {
-        card.addEventListener('click', () => {
-            const pilar = card.getAttribute('data-pilar');
-            console.log(`Pilar selecionado: ${pilar}`);
+        // Validação simples (o HTML5 já valida o básico, aqui fazemos a lógica de sucesso)
+        if (nome && email) {
+            // Exibe mensagem de sucesso
+            feedback.textContent = `Obrigado pelo contato, ${nome}! Juntos faremos um agro mais sustentável.`;
+            feedback.className = "sucesso"; // Aplica a classe estilizada no CSS
             
-            // Pequeno efeito visual de clique alterando temporariamente o fundo
-            card.style.backgroundColor = '#d8f3dc';
+            // Limpa os campos do formulário
+            formContato.reset();
+
+            // Esconde a mensagem após 5 segundos
             setTimeout(() => {
-                card.style.backgroundColor = '#ffffff';
-            }, 300);
-        });
+                feedback.className = "hidden";
+            }, 5000);
+        }
     });
 });

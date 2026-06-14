@@ -10,10 +10,10 @@
 
     <header>
         <div class="container">
-            <h1>Agro<span>Sustentável</span></h1>
+            <h1>Agro <span>Forte</span> & Sustentável</h1>
             <nav>
                 <ul>
-                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#pilares">Pilares</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
@@ -21,49 +21,47 @@
         </div>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h2>O Futuro da Terra é Consciência e Tecnologia</h2>
-            <p>Produzir com força, alimentar o mundo e preservar o meio ambiente. Esse é o nosso compromisso.</p>
-            <a href="#pilares" class="btn">Conheça Nossos Pilares</a>
+    <section id="hero">
+        <div class="container hero-content">
+            <h2>O Futuro da Terra em Nossas Mãos</h2>
+            <p>Unindo a força da produção em larga escala com o respeito absoluto ao meio ambiente. Tecnologia e consciência cultivando o amanhã.</p>
+            <button id="btn-conhecer">Conheça Mais</button>
         </div>
     </section>
 
-    <section id="pilares" class="pilares-section">
-        <div class="container">
-            <h2 class="section-title">Agro Forte e Sustentável</h2>
-            <div class="cards-grid">
-                <div class="card" data-pilar="tecnologia">
-                    <h3>Tecnologia no Campo</h3>
-                    <p>Uso de drones, sensores e inteligência artificial para otimizar o plantio e reduzir o desperdício de recursos.</p>
-                </div>
-                <div class="card" data-pilar="preservacao">
-                    <h3>Preservação Ambiental</h3>
-                    <p>Práticas de rotação de culturas, plantio direto e manejo correto do solo para garantir o futuro da terra.</p>
-                </div>
-                <div class="card" data-pilar="energia">
-                    <h3>Energia Limpa</h3>
-                    <p>Fazendas movidas a energia solar e biomassa, reduzindo drasticamente a pegada de carbono da produção.</p>
-                </div>
+    <section id="pilares" class="container">
+        <h2>Nossos Pilares</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>Tecnologia Verde</h3>
+                <p>Uso de drones, sensores e IA para otimizar o uso de água e insumos, reduzindo o impacto ambiental.</p>
+            </div>
+            <div class="card">
+                <h3>Preservação</h3>
+                <p>Práticas de rotação de culturas, plantio direto e manejo correto do solo para manter a terra fértil por gerações.</p>
+            </div>
+            <div class="card">
+                <h3>Energia Limpa</h3>
+                <p>Fazendas autossuficientes utilizando energia solar e biomassa para mover as engrenagens do campo.</p>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="contato-section">
+    <section id="contato">
         <div class="container">
-            <h2>Junte-se ao Movimento</h2>
-            <p>Quer saber como transformar sua produção ou apoiar o agro sustentável?</p>
+            <h2>Faça Parte Desse Movimento</h2>
             <form id="form-contato">
                 <input type="text" id="nome" placeholder="Seu Nome" required>
                 <input type="email" id="email" placeholder="Seu E-mail" required>
-                <button type="submit" class="btn">Enviar Mensagem</button>
+                <textarea id="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
             </form>
-            <div id="mensagem-sucesso" class="hidden"></div>
+            <div id="feedback" class="hidden"></div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Agro Forte e Sustentável. Cultivando o amanhã sempre.</p>
+        <p>&copy; 2026 Agro Forte e Sustentável. Cultivando um futuro melhor.</p>
     </footer>
 
     <script src="script.js"></script>

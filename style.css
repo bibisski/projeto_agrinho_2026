@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Configurações Gerais */
 * {
     margin: 0;
     padding: 0;
@@ -6,32 +6,24 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Variáveis de Cores */
-:root {
-    --verde-escuro: #1b4332;
-    --verde-principal: #2d6a4f;
-    --verde-claro: #d8f3dc;
-    --laranja-terra: #b30b4b;
-    --cinza-claro: #f8f9fa;
-    --texto: #333;
-}
-
 body {
-    color: var(--texto);
+    background-color: #f4f6f4;
+    color: #333;
     line-height: 1.6;
-    background-color: #fff;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px 0;
 }
 
-/* Header */
+/* Cabeçalho e Navegação */
 header {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #1b4332;
+    color: #fff;
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -41,16 +33,11 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-}
-
-header h1 {
-    color: var(--verde-escuro);
-    font-size: 1.5rem;
+    padding: 0 20px;
 }
 
 header h1 span {
-    color: var(--verde-principal);
+    color: #52b788;
 }
 
 nav ul {
@@ -63,68 +50,62 @@ nav ul li {
 }
 
 nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: var(--texto);
-    font-weight: 600;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: var(--verde-principal);
+    color: #52b788;
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200') no-repeat center center/cover;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+/* Seção Principal (Hero) - Sem imagens, usando degradê */
+#hero {
+    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
     color: #fff;
-    padding: 0 20px;
+    text-align: center;
+    padding: 100px 20px;
 }
 
 .hero-content h2 {
     font-size: 2.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 25px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    color: #d8f3dc;
 }
 
-.btn {
-    display: inline-block;
-    background-color: var(--verde-principal);
-    color: #fff;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+button {
+    background-color: #52b788;
+    color: #1b4332;
     border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.btn:hover {
-    background-color: var(--verde-escuro);
+button:hover {
+    background-color: #74c69d;
+    transform: translateY(-2px);
 }
 
-/* Pilares Section */
-.pilares-section {
+/* Pilares (Cards) */
+#pilares {
     padding: 60px 0;
-    background-color: var(--cinza-claro);
+    text-align: center;
 }
 
-.section-title {
-    text-align: center;
+#pilares h2 {
     margin-bottom: 40px;
-    color: var(--verde-escuro);
+    color: #1b4332;
 }
 
 .cards-grid {
@@ -138,61 +119,67 @@ nav ul li a:hover {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border-top: 5px solid var(--verde-principal);
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 5px solid #2d6a4f;
+    transition: transform 0.3s;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
 }
 
 .card h3 {
+    color: #2d6a4f;
     margin-bottom: 15px;
-    color: var(--verde-escuro);
 }
 
-/* Contato Section */
-.contato-section {
+/* Seção de Contato */
+#contato {
+    background-color: #e9ecef;
     padding: 60px 0;
     text-align: center;
 }
 
-.contato-section form {
+#contato h2 {
+    color: #1b4332;
+    margin-bottom: 30px;
+}
+
+#form-contato {
     max-width: 500px;
-    margin: 30px auto 0 auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.contato-section input {
-    padding: 15px;
-    border: 1px solid #ccc;
+#form-contato input, #form-contato textarea {
+    padding: 12px;
+    border: 1px solid #ced4da;
     border-radius: 5px;
     font-size: 1rem;
 }
 
-/* Classes utilitárias do JS */
-.hidden {
-    display: none;
-}
-
-#mensagem-sucesso {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: var(--verde-claro);
-    color: var(--verde-escuro);
-    border-radius: 5px;
-    font-weight: bold;
+#form-contato input:focus, #form-contato textarea:focus {
+    outline: none;
+    border-color: #2d6a4f;
 }
 
 /* Rodapé */
 footer {
-    background-color: var(--verde-escuro);
-    color: #fff;
+    background-color: #1b4332;
+    color: #b7e4c7;
     text-align: center;
     padding: 20px 0;
     font-size: 0.9rem;
+}
+
+/* Classes Utilitárias JavaScript */
+.hidden {
+    display: none;
+}
+
+.sucesso {
+    margin-top: 15px;
+    color: #2d6a4f;
+    font-weight: bold;
 }
