@@ -1,0 +1,137 @@
+/* Configurações Gerais e Cores */
+:root {
+    --verde-escuro: #1b4332;
+    --verde-principal: #2d6a4f;
+    --verde-claro: #52b788;
+    --bege-fundo: #f4f7f5;
+    --texto: #2d3748;
+    --branco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bege-fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho (Hero Section) */
+header {
+    background: linear-gradient(135deg, var(--verde-escuro), var(--verde-principal));
+    color: var(--branco);
+    padding: 100px 0;
+    text-align: center;
+    border-bottom: 5px solid var(--verde-claro);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+header h1 span {
+    color: var(--verde-claro);
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    opacity: 0.9;
+}
+
+header button {
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+header button:hover {
+    background-color: var(--branco);
+    transform: scale(1.05);
+}
+
+/* Grid de Pilares (Cards) */
+.grid-pilares {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 60px 0;
+}
+
+.card {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: translateY 0.3s;
+    border-top: 4px solid var(--verde-principal);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card .icone {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: var(--verde-escuro);
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+}
+
+/* Seção Dinâmica (JavaScript) */
+#info-extra {
+    background-color: var(--branco);
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    border-left: 5px solid var(--verde-claro);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#info-extra h2 {
+    color: var(--verde-escuro);
+    margin-bottom: 15px;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
